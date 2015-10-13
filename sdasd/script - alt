@@ -1,0 +1,41 @@
+<script type="text/javascript">
+
+ $(document).ready(function(){
+	//alert($('title').html());
+	if($('title').html() != ''){
+		var title = $('title').html();
+	} else {
+		var title = 'Интернет-магазин стройматериалов. Комплектация строительных объектов';
+	}
+	if($('h1').html() != ''){
+		var h1 = $('h1').html();
+	} else if($('h2').html() != ''){
+		var h1 = $('h2').html();
+	}else{
+		h1 = 'remont3000.ru';
+	}
+	if(h1 == null){
+		h1 = 'Интернет-магазин стройматериалов remont3000.ru';
+	}
+	if(title == null){
+		h1 = 'Интернет-магазин стройматериалов remont3000.ru';
+	}
+	 if($('img').length != 0){
+		var i = 0;
+		
+		for(i;i< $('img').length; i++){
+			
+			if($('img').get(i).alt == ''){
+				if ( i & 1 ) {
+					$('img').get(i).alt = title;  
+				} else {
+					$('img').get(i).alt = title; 
+				}
+			}
+		}
+	 }
+	 
+	 // $('img:gt(0)')
+	
+});
+</script>	
